@@ -1,0 +1,9 @@
+<%= form_for :creature, url: "/creatures", method: "post"	 do |f| %>
+
+    <%= f.text_field :name, :value => '', :placeholder => "Name of Creature" %>
+    <%= f.text_field :description, value: '', placeholder: "Description of Creature", size: 25 %>
+    <%= f.submit "Create Creature" %>
+
+<% end %>
+<br>
+<%= button_to "Back to Creatures List", creatures_path, method: :get %>

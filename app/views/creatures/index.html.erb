@@ -1,0 +1,12 @@
+<h1> List of Creatures </h1> 
+
+<%= button_to "Create New Creature", new_creature_path, method: :get %>
+
+<% @creatures.each do |creature| %>
+  <h2><%= creature.name %> </h2>
+  <p><%= creature.description %></p>
+  <div> Creature Id:  <%= creature.id %></div> <br>
+  <%= button_to "Delete", creature, method: :delete %>
+  <br>
+  <%= button_to "Edit", edit_creature_path(id=creature.id), method: :get %>
+<% end %>
