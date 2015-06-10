@@ -1,7 +1,9 @@
 <%= form_for @creature do |f| %>
 
-    <%= f.text_field :name %>
-    <%= f.text_area :description %>
+    <%= f.text_field :name, value: '', placeholder: 'Name of Creature' %>
+    <%= f.text_field :description, value: '', placeholder: "Description of Creature", size: 25 %>
     <%= f.submit "update creature" %>
 
 <% end %>
+<br>
+<%= button_to "Back to Creatures List", creatures_path, method: :get %>
